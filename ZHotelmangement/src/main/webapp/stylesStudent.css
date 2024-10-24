@@ -1,0 +1,83 @@
+@charset "UTF-8";
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 20px;
+}
+
+.table-container {
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+.student-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    animation: cartoonFadeIn 1s ease-in-out;
+}
+
+.student-table th, .student-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.student-table th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.student-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.student-table tr:hover {
+    background-color: #ddd;
+}
+
+@keyframes cartoonFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+button {
+    margin: 10px;
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+@media screen and (max-width: 600px) {
+    .student-table, .student-table th, .student-table td {
+        display: block;
+        width: 100%;
+    }
+}
